@@ -27,6 +27,7 @@ export default function Partners() {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
+   
     useEffect(() => {
     if (screenWidth < 750) {
       setNum([1]);
@@ -36,15 +37,17 @@ export default function Partners() {
       setNum([1, 2, 3]);
     }
   }, [screenWidth]);
+ 
+ let interval;
   useEffect(() => {
-    const interval = setInterval(() => {
+     interval = setInterval(() => {
       handleClickNext();
     }, 3000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [num,timer]);
+  }, [num]);
 
   function handleClickNext(){
     if(screenWidth <750){
@@ -81,9 +84,17 @@ export default function Partners() {
         }else if(num[0] == 7){
             setNum([4,5,6])}else{setNum([1,2,3])}
     }
-
+    
   }
 
+  function stopTimer(){
+    clearInterval(interval);
+  }
+  function startTimer(){
+    interval = setInterval(() => {
+      handleClickNext();
+    }, 3000);
+  }
   
     
       
@@ -91,14 +102,14 @@ export default function Partners() {
   
     
   return (
-    <MainDiv>
+    <MainDiv onMouseOver={()=> stopTimer()} onMouseLeave={() => startTimer()} >
         <Title>პროექტის პარტნიორები</Title>
         <Logos>
             {num.map((item,index) =>(
                 <Logo key={index} src={imgs[item - 1]} alt={`Logo ${item}`} />
             ))}
-            <NextIcon src={nextIcon} onClick={() => handleClickNext()}></NextIcon>
-            <PrevIcon src={prevIcon} onClick={() => handleClickPrev()}></PrevIcon>
+            <NextIcon onMouseOver={()=> stopTimer()} src={nextIcon} onClick={() => handleClickNext()}></NextIcon>
+            <PrevIcon onMouseOver={()=> stopTimer()} src={prevIcon} onClick={() => handleClickPrev()}></PrevIcon>
         </Logos>
     </MainDiv>
   )

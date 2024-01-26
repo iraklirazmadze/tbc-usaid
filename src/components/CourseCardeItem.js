@@ -20,7 +20,9 @@ const MainBox = styled.div`
     border: 1px solid rgb(244,244,244,0.5);;
     height: 416px;
     border-radius: 10px;
-
+    display: flex;
+    flex-direction: column;
+  position: relative;
 `
 
 const Img = styled.img`
@@ -41,11 +43,13 @@ margin: 30px 0 0 20px;
 
 const CourseDetails = styled.div`
 display: flex;
-margin: 90px 0 0 20px;
+margin-left:20px;
 align-items: center;
 cursor: pointer;
+position: absolute;
+bottom: 30px;
 & :hover{
-  color: darkblue;
+  color: rgb(56, 105, 204, 0.7);
 }
 `
 
@@ -54,6 +58,7 @@ const ArrowImg = styled.img`
 `
 
 const Paragraph = styled.div`
-color: #3869cc;
+color: rgb(56, 105, 204);
 margin-left: 10px;
+
 `

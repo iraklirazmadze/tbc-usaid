@@ -59,6 +59,7 @@ border-bottom: 1px solid rgb(243,243,243,0.3);
 const Question = styled.div`
 color: rgb(244,244,244);
 margin: 40px 0;
+font-size: 22px;
 
 `
 

@@ -29,6 +29,7 @@ const MainBox = styled.div`
     justify-content: center;
     width: 100%;
     position: sticky;
+    z-index: 1;
     top:0;
     
 `
@@ -44,6 +45,7 @@ const LogoTitleBox = styled.div`
     display: flex;
     align-items: center;
     margin-left: 5%;
+    width: 182px;
 `
 
 const Logo = styled.img`
