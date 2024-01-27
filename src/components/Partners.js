@@ -127,7 +127,6 @@ const MainDiv = styled.div`
 const Title = styled.h1`
     color: #f4f4f4;
     margin:40px 0 40px 0;
-    margin-left: 5%;
     max-width: 1000px;
     text-align: center;
     
@@ -157,6 +156,10 @@ const NextIcon = styled.img`
     position:absolute;
     right:2%;
     cursor:pointer;
+    opacity: 0.6;
+    &:hover{
+      opacity: 0.3;
+    }
 `
 
 const PrevIcon = styled.img`
@@ -164,5 +167,10 @@ const PrevIcon = styled.img`
     height: 50px;
     position:absolute;
     left: 2%;
-    cursor:pointer
+    cursor:pointer;
+    opacity: 0.6;
+
+    &:hover{
+      opacity: 0.3;
+    }
 `

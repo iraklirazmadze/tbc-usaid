@@ -68,7 +68,7 @@ align-items: end;
         background-color: #00cefcf5;
         border:0;
         cursor:pointer;
-        border-radius: 20px;
+        border-radius: 10px;
         &:hover{
             color:black;
             background-color: #f3e1e3f5;

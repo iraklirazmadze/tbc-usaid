@@ -19,6 +19,7 @@ export default function Questions() {
   return (
     <MainDiv>
         <QuestionsBox>
+        <QuestionsTitle>ხშირად დასმული კითხვები</QuestionsTitle>
             {questionsData.map((item,index) => (
                 <QuestionAndAnswer key={index}>
                   <QuestionAndArrow onClick={() => handleClick(index)}>
@@ -50,6 +51,13 @@ const QuestionsBox = styled.div`
 margin:0 5% 70px 5%;
 width: 90%;
 max-width: 1000px;
+
+`
+
+const QuestionsTitle= styled.p`
+  color:white;
+  font-size: 25px;
+  margin:70px 0 0 0 ;
 `
 
 const QuestionAndAnswer = styled.div`
@@ -58,7 +66,7 @@ border-bottom: 1px solid rgb(243,243,243,0.3);
 
 const Question = styled.div`
 color: rgb(244,244,244);
-margin: 40px 0;
+margin: 30px 0;
 font-size: 22px;
 
 `

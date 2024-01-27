@@ -30,8 +30,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-
-
 background-image:url(${bgImg});
 background-repeat:no-repeat;
 background-size:100%;
@@ -40,10 +38,9 @@ height: 30vw;
 
 const H1 = styled.h1`
     color:white;
-    margin:0;
-    margin-left: 5%;
+    margin: 0 5%;
     max-width: 1000px;
-    width: 100%;
+    width: 90%;
     font-size: 30px;
     @media screen and (min-width: 800px) {
     font-size: 48px;
@@ -52,11 +49,9 @@ const H1 = styled.h1`
 `
 const H2 = styled.h2`
     color:white;
-    margin-left: 5%;
     max-width: 1000px;
-    width: 100%;
-    margin: 0;
-    margin-left: 5%;
+    width: 90%;
+    margin:0 5%;
     font-size: 20px;
     @media screen and (min-width: 800px) {
     font-size: 38px;
@@ -78,5 +73,6 @@ const Info = styled.div`
 font-family: wfont_643d94_dd28b3957391427eb54de1c9eff7cfb1,wf_dd28b3957391427eb54de1c9e,orig_tbc_x_regular;
 color: rgb(244,244,244);
     margin:30px 5%;
+    width: 90%;
     max-width: 1000px;
 `

@@ -31,6 +31,7 @@ const MainBox = styled.div`
     position: sticky;
     z-index: 1;
     top:0;
+    padding: 10px 0;
     
 `
 
